@@ -1,0 +1,248 @@
+:root {
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Space Mono", monospace;
+    background-color: #C5E4E7;
+    width: 100%;
+}
+
+input,
+label {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+label,
+.left-column p {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 23.7px;
+    color: #5E7A7D;
+}
+
+input[type="number"] {
+    text-align: right;
+    background-color: aliceblue;
+    width: 90%;
+    padding: .5em;
+    border: none;
+    font-size: 1.5rem;
+    color: #00474B;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+label {
+    display: inline-block;
+    width: 7.313rem;
+    height: 3rem;
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 35.54px;
+    border-radius: 5px;
+    padding: .25em;
+    margin-right: 0.875rem;
+    margin-bottom: 1em;
+}
+
+input[type="radio"]:checked+label {
+    background-color: #9FE8DF;
+}
+
+input[type="radio"]+label:hover,
+input[type="radio"]+label:focus {
+    background-color: #9FE8DF;
+}
+
+input:active,
+input:focus {
+    outline: 2px solid #26C2AE;
+}
+
+input::placeholder {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #00474B;
+    opacity: 0.35;
+}
+
+#custom-tip {
+    display: inline-block;
+    width: 7.313rem;
+    height: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 35.54px;
+    border-radius: 5px;
+    padding: .25em;
+    border: none;
+    background-color: aliceblue;
+}
+
+.radio-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    width: 50%;
+    background-color: var(--white);
+    padding: 2.813rem;
+    border-radius: 25px;
+    box-shadow: 0px 32px 43px 0px #4FA6AF33;
+    margin-bottom: 1em;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    min-height: 80vh;
+}
+
+.left-column,
+.right-column {
+    width: 50%;
+}
+
+.right-column {
+    width: 25.813rem;
+    height: 26.063rem;
+    border-radius: 15px;
+    background-color: #00474B;
+    color: #fff;
+    padding: 2.5rem;
+}
+
+.right-column p {
+    margin: 0;
+}
+
+.top-heading {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 23.7px;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.sub-heading {
+    margin-top: 0;
+    font-size: 0.813rem;
+    color: #7F9D9F;
+    line-height: 19.25px;
+}
+
+#tip-amount-display,
+#total-display {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 71.09px;
+    letter-spacing: -1px;
+    color: #26C2AE;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-container {
+    position: relative;
+}
+
+#reset-btn {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #0D686D;
+    border-radius: 5px;
+    border: none;
+    font-family: "Space Mono", monospace;
+    color: #00474B;
+    font-size: 1.25rem;
+    line-height: 29.62px;
+    position: absolute;
+    bottom: -12.5rem;
+}
+
+footer p {
+    text-align: center;
+    font-size: .75rem;
+    font-family: sans-serif;
+    letter-spacing: 1.5px;
+    margin-top: 1em;
+}
+
+@media screen and (max-width: 900px) {
+    h1 {
+        text-align: center;
+        margin-top: 3.125rem;
+        margin-bottom: 2.554rem;
+    }
+
+    main {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        min-height: 100vh;
+    }
+
+    form {
+        flex-direction: column;
+        width: 100%;
+        padding: 1em;
+        background-color: var(--white);
+    }
+
+    .left-column {
+        width: 100%;
+        margin: 0 auto;
+        padding: 1em;
+        height: auto;
+    }
+
+    .right-column {
+        padding: 2em;
+        width: 90vw;
+        height: fit-content;
+        margin: 0 auto;
+    }
+
+    input,
+    input[type="number"],
+    label {
+        width: 100%;
+        display: block;
+    }
+
+    #reset-btn {
+        position: static;
+        margin: 2em 0;
+    }
+}
